@@ -53,9 +53,14 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-lora text-xl font-medium text-teal dark:text-white">
-              SonamGyurmeTamang
-            </span>
+            <div className="flex flex-col">
+              <span className="font-lora text-lg font-medium text-teal dark:text-amber transition-colors">
+                Sonam Gyurme Tamang
+              </span>
+              <span className="text-xs text-gray-600 dark:text-gray-300">
+                Ven. Khen Rinpoche
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

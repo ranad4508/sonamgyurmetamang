@@ -15,8 +15,10 @@ export default function HeroSection() {
           src="/k6.png?height=1080&width=1920"
           alt="Buddhist Temple"
           fill
+          className="object-cover object-center"
           priority
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal/80 to-teal/60" />
       </div>
 
       <div className="container mx-auto px-4 z-10 py-16 md:py-0">
@@ -66,7 +68,7 @@ export default function HeroSection() {
           >
             <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="/k4.png?height=800&width=600"
                 alt="Ven. Khen Rinpoche Dr. Sonam Gyurme Tamang"
                 fill
                 className="object-cover"
