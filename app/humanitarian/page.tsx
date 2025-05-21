@@ -138,7 +138,7 @@ export default function HumanitarianPageClient() {
                         {earthquakeRelief.achievements.map(
                           (achievement, index) => (
                             <li key={index} className="flex items-start gap-2">
-                              <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1">
+                              <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center shrink-0 mt-1">
                                 ✓
                               </div>
                               <span className="text-gray-800 dark:text-gray-300">
@@ -164,7 +164,7 @@ export default function HumanitarianPageClient() {
                     "{earthquakeRelief.testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 rounded-full text-maroon flex items-center justify-center text-white">
+                    <div className="w-10 h-10 rounded-full text-maroon flex items-center justify-center ">
                       {earthquakeRelief.testimonial.author.charAt(0)}
                     </div>
                     <div>
@@ -207,7 +207,7 @@ export default function HumanitarianPageClient() {
                       <ul className="space-y-3">
                         {fuelCrisis.achievements.map((achievement, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center text-white shrink-0 mt-1">
+                            <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center shrink-0 mt-1">
                               ✓
                             </div>
                             <span className="text-gray-800 dark:text-gray-300">
@@ -268,7 +268,7 @@ export default function HumanitarianPageClient() {
                   <ul className="space-y-3">
                     {project.achievements.map((achievement, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center text-white shrink-0 mt-1">
+                        <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center shrink-0 mt-1">
                           ✓
                         </div>
                         <span className="text-gray-800 dark:text-gray-300">
