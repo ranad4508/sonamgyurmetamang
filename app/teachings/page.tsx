@@ -224,7 +224,7 @@ export default function TeachingsPageClient() {
               </div>
               <div className="relative h-full min-h-[300px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/teaching.jpg?height=400&width=600"
                   alt="Nyingma tradition teachings"
                   fill
                   className="object-cover rounded-lg"
@@ -240,7 +240,7 @@ export default function TeachingsPageClient() {
               <div className="order-2 md:order-1">
                 <div className="relative h-full min-h-[300px]">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/teaching1.jpg?height=400&width=600"
                     alt="Dzogchen meditation"
                     fill
                     className="object-cover rounded-lg"
@@ -317,7 +317,7 @@ export default function TeachingsPageClient() {
               </div>
               <div className="relative h-full min-h-[300px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/k6.png?height=400&width=600"
                   alt="Nyungné practice"
                   fill
                   className="object-cover rounded-lg"

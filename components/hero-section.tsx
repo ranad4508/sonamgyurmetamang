@@ -76,7 +76,7 @@ export default function HeroSection() {
           >
             <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               <Image
-                src="/k3.png?height=800&width=600"
+                src="hero.jpg?height=800&width=600"
                 alt="Ven. Khen Rinpoche Dr. Sonam Gyurme Tamang"
                 fill
                 className="object-cover"
