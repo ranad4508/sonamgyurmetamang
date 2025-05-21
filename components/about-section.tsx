@@ -76,7 +76,7 @@ export default function AboutSection() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-orange p-4 rounded-lg shadow-lg text-white">
+            <div className="absolute -bottom-6 bg-orange p-4 rounded-lg shadow-lg text-white">
               <p className="font-playfair text-lg">
                 40+ years of spiritual practice
               </p>
