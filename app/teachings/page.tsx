@@ -14,19 +14,19 @@ export default function TeachingsPageClient() {
       name: "H.E. Dinchhen Rinpoche",
       role: "Root Teacher",
       teachings: "Dzogchen, Mahamudra",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/dinchenrinpoche.jpg?height=300&width=300",
     },
     {
       name: "H.H. Penor Rinpoche",
       role: "Lineage Holder",
       teachings: "Nyingma Tradition, Kama and Terma",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/PenorRinpoche.jpg?height=300&width=300",
     },
     {
       name: "H.E. Kyabje Rigzin Dorje Rinpoche",
       role: "Wisdom Master",
       teachings: "Tantric Practices, Ritual Arts",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/kyabje.jpeg?height=300&width=300",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function TeachingsPageClient() {
                     src={master.image || "/placeholder.svg"}
                     alt={master.name}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div className="p-6">
@@ -152,7 +152,7 @@ export default function TeachingsPageClient() {
               </div>
               <div className="relative h-full min-h-[300px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/k6.png?height=400&width=600"
                   alt="Empowerment ceremony"
                   fill
                   className="object-cover rounded-lg"
@@ -301,7 +301,7 @@ export default function TeachingsPageClient() {
                 <div className="mt-6">
                   <Button
                     asChild
-                    className="bg-maroon hover:bg-maroon/90 text-white"
+                    className="bg-crimson hover:bg-crimson/90 text-white"
                   >
                     <a
                       href="https://nyungne.org"

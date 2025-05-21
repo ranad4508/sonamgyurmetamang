@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import PageTransition from "@/components/page-transition"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Building, Tv, School, Mountain, Film, Calendar } from "lucide-react"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import PageTransition from "@/components/page-transition";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Building, Tv, School, Mountain, Film, Calendar } from "lucide-react";
 
 export default function ProjectsPageClient() {
   const coreProjects = [
@@ -16,7 +22,7 @@ export default function ProjectsPageClient() {
       year: "2008",
       icon: <Building className="h-10 w-10 text-amber" />,
       color: "bg-amber/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/btmcfoundation.png?height=400&width=600",
       details: [
         "Provides structured courses in Buddhist philosophy and meditation",
         "Hosts regular teaching sessions by Ven. Khen Rinpoche and visiting masters",
@@ -32,7 +38,7 @@ export default function ProjectsPageClient() {
       year: "2009",
       icon: <Tv className="h-10 w-10 text-maroon" />,
       color: "bg-maroon/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/dharmatv.png?height=400&width=600",
       details: [
         "Broadcasts 24/7 Buddhist content to viewers worldwide",
         "Features live teachings, guided meditations, and documentary programs",
@@ -48,7 +54,7 @@ export default function ProjectsPageClient() {
       year: "2010",
       icon: <School className="h-10 w-10 text-teal" />,
       color: "bg-teal/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/rdcck.png?height=400&width=600",
       details: [
         "Offers traditional monastic education to young monks and nuns",
         "Curriculum includes Buddhist philosophy, ritual arts, and meditation",
@@ -64,7 +70,7 @@ export default function ProjectsPageClient() {
       year: "2011",
       icon: <Mountain className="h-10 w-10 text-plum" />,
       color: "bg-plum/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/18.jpg?height=400&width=600",
       details: [
         "Provides a serene environment for intensive meditation practice",
         "Hosts retreats ranging from weekend programs to three-year retreats",
@@ -89,7 +95,7 @@ export default function ProjectsPageClient() {
         "Distributes content through multiple platforms including television and online streaming",
       ],
     },
-  ]
+  ];
 
   const recentInitiatives = [
     {
@@ -99,7 +105,7 @@ export default function ProjectsPageClient() {
       year: "2024",
       icon: <Calendar className="h-10 w-10 text-amber" />,
       color: "bg-amber/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/pureland.png?height=400&width=600",
       details: [
         "Organizes pilgrimages to sacred Buddhist sites throughout Asia",
         "Provides expert guidance with deep knowledge of Buddhist history and significance",
@@ -115,7 +121,7 @@ export default function ProjectsPageClient() {
       year: "2024",
       icon: <Building className="h-10 w-10 text-maroon" />,
       color: "bg-maroon/10",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/btmcfoundation.png?height=400&width=600",
       details: [
         "Facilitates dialogue between different religious and cultural traditions",
         "Promotes Nyungné practice as a method for cultivating compassion and peace",
@@ -124,7 +130,7 @@ export default function ProjectsPageClient() {
         "Provides resources for communities seeking to implement compassion-based approaches",
       ],
     },
-  ]
+  ];
 
   return (
     <PageTransition>
@@ -134,8 +140,9 @@ export default function ProjectsPageClient() {
         </h1>
 
         <p className="text-lg text-center max-w-3xl mx-auto mb-16 text-gray-700 dark:text-gray-300">
-          Venerable Khen Rinpoche has established numerous institutions and initiatives dedicated to preserving and
-          sharing Buddhist wisdom, education, and cultural heritage.
+          Venerable Khen Rinpoche has established numerous institutions and
+          initiatives dedicated to preserving and sharing Buddhist wisdom,
+          education, and cultural heritage.
         </p>
 
         <Tabs defaultValue="all" className="mb-16">
@@ -155,7 +162,9 @@ export default function ProjectsPageClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}>
+                  <Card
+                    className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}
+                  >
                     <div className="relative h-48 w-full">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -167,19 +176,25 @@ export default function ProjectsPageClient() {
                     <CardHeader className="flex flex-row items-center gap-4">
                       {project.icon}
                       <div>
-                        <CardTitle className="text-xl font-lora">{project.title}</CardTitle>
+                        <CardTitle className="text-xl font-lora">
+                          {project.title}
+                        </CardTitle>
                         <CardDescription>Est. {project.year}</CardDescription>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
                       <ul className="space-y-1">
                         {project.details.slice(0, 2).map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1 text-xs">
+                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center  shrink-0 mt-1 text-xs">
                               ✓
                             </div>
-                            <span className="text-sm text-gray-700 dark:text-gray-300">{detail}</span>
+                            <span className="text-sm text-gray-700 dark:text-gray-300">
+                              {detail}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -192,45 +207,55 @@ export default function ProjectsPageClient() {
 
           <TabsContent value="education">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[coreProjects[0], coreProjects[2], coreProjects[3]].map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}>
-                    <div className="relative h-48 w-full">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover rounded-t-lg"
-                      />
-                    </div>
-                    <CardHeader className="flex flex-row items-center gap-4">
-                      {project.icon}
-                      <div>
-                        <CardTitle className="text-xl font-lora">{project.title}</CardTitle>
-                        <CardDescription>Est. {project.year}</CardDescription>
+              {[coreProjects[0], coreProjects[2], coreProjects[3]].map(
+                (project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card
+                      className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}
+                    >
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src={project.image || "/placeholder.svg"}
+                          alt={project.title}
+                          fill
+                          className="object-cover rounded-t-lg"
+                        />
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
-                      <ul className="space-y-1">
-                        {project.details.slice(0, 3).map((detail, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1 text-xs">
-                              ✓
-                            </div>
-                            <span className="text-sm text-gray-700 dark:text-gray-300">{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+                      <CardHeader className="flex flex-row items-center gap-4">
+                        {project.icon}
+                        <div>
+                          <CardTitle className="text-xl font-lora">
+                            {project.title}
+                          </CardTitle>
+                          <CardDescription>Est. {project.year}</CardDescription>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-700 dark:text-gray-300 mb-4">
+                          {project.description}
+                        </p>
+                        <ul className="space-y-1">
+                          {project.details.slice(0, 3).map((detail, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center shrink-0 mt-1 text-xs">
+                                ✓
+                              </div>
+                              <span className="text-sm text-gray-700 dark:text-gray-300">
+                                {detail}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                )
+              )}
             </div>
           </TabsContent>
 
@@ -243,7 +268,9 @@ export default function ProjectsPageClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}>
+                  <Card
+                    className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}
+                  >
                     <div className="relative h-48 w-full">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -255,19 +282,25 @@ export default function ProjectsPageClient() {
                     <CardHeader className="flex flex-row items-center gap-4">
                       {project.icon}
                       <div>
-                        <CardTitle className="text-xl font-lora">{project.title}</CardTitle>
+                        <CardTitle className="text-xl font-lora">
+                          {project.title}
+                        </CardTitle>
                         <CardDescription>Est. {project.year}</CardDescription>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
                       <ul className="space-y-1">
                         {project.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1 text-xs">
+                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center shrink-0 mt-1 text-xs">
                               ✓
                             </div>
-                            <span className="text-sm text-gray-700 dark:text-gray-300">{detail}</span>
+                            <span className="text-sm text-gray-700 dark:text-gray-300">
+                              {detail}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -287,7 +320,9 @@ export default function ProjectsPageClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}>
+                  <Card
+                    className={`h-full ${project.color} border-none shadow-md hover:shadow-lg transition-shadow`}
+                  >
                     <div className="relative h-64 w-full">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -299,19 +334,25 @@ export default function ProjectsPageClient() {
                     <CardHeader className="flex flex-row items-center gap-4">
                       {project.icon}
                       <div>
-                        <CardTitle className="text-xl font-lora">{project.title}</CardTitle>
+                        <CardTitle className="text-xl font-lora">
+                          {project.title}
+                        </CardTitle>
                         <CardDescription>Est. {project.year}</CardDescription>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
                       <ul className="space-y-1">
                         {project.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1 text-xs">
+                            <div className="w-5 h-5 rounded-full text-amber flex items-center justify-center shrink-0 mt-1 text-xs">
                               ✓
                             </div>
-                            <span className="text-sm text-gray-700 dark:text-gray-300">{detail}</span>
+                            <span className="text-sm text-gray-700 dark:text-gray-300">
+                              {detail}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -329,26 +370,39 @@ export default function ProjectsPageClient() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">Project Details</h2>
+          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">
+            Project Details
+          </h2>
 
           {coreProjects.map((project, index) => (
-            <div key={index} className={`mb-16 p-8 rounded-lg shadow-md ${project.color}`}>
+            <div
+              key={index}
+              className={`mb-16 p-8 rounded-lg shadow-md ${project.color}`}
+            >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-center gap-4 mb-6">
                     {project.icon}
-                    <h3 className="font-lora text-2xl text-teal dark:text-sage">{project.title}</h3>
+                    <h3 className="font-lora text-2xl text-teal dark:text-sage">
+                      {project.title}
+                    </h3>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-6">{project.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-6">
+                    {project.description}
+                  </p>
                   <div className="bg-white/50 dark:bg-gray-800/50 p-6 rounded-lg">
-                    <h4 className="font-lora text-xl mb-4 text-maroon dark:text-amber">Key Features</h4>
+                    <h4 className="font-lora text-xl mb-4 text-maroon dark:text-amber">
+                      Key Features
+                    </h4>
                     <ul className="space-y-3">
                       {project.details.map((detail, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1">
+                          <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center shrink-0 mt-1">
                             ✓
                           </div>
-                          <span className="text-gray-800 dark:text-gray-300">{detail}</span>
+                          <span className="text-gray-800 dark:text-gray-300">
+                            {detail}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -374,11 +428,16 @@ export default function ProjectsPageClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">Recent Initiatives</h2>
+          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">
+            Recent Initiatives
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {recentInitiatives.map((initiative, index) => (
-              <Card key={index} className={`${initiative.color} border-none shadow-lg`}>
+              <Card
+                key={index}
+                className={`${initiative.color} border-none shadow-lg`}
+              >
                 <div className="relative h-64 w-full">
                   <Image
                     src={initiative.image || "/placeholder.svg"}
@@ -388,20 +447,30 @@ export default function ProjectsPageClient() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-lora">{initiative.title}</CardTitle>
-                  <CardDescription className="text-base">Established in {initiative.year}</CardDescription>
+                  <CardTitle className="text-2xl font-lora">
+                    {initiative.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    Established in {initiative.year}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-800 dark:text-gray-300 mb-6">{initiative.description}</p>
+                  <p className="text-gray-800 dark:text-gray-300 mb-6">
+                    {initiative.description}
+                  </p>
                   <div className="bg-white/50 dark:bg-gray-800/50 p-6 rounded-lg">
-                    <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">Key Features</h4>
+                    <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">
+                      Key Features
+                    </h4>
                     <ul className="space-y-3">
                       {initiative.details.map((detail, idx) => (
                         <li key={idx} className="flex items-start gap-2">
-                          <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1">
+                          <div className="w-6 h-6 rounded-full text-amber flex items-center justify-centershrink-0 mt-1">
                             ✓
                           </div>
-                          <span className="text-gray-800 dark:text-gray-300">{detail}</span>
+                          <span className="text-gray-800 dark:text-gray-300">
+                            {detail}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -413,5 +482,5 @@ export default function ProjectsPageClient() {
         </motion.div>
       </div>
     </PageTransition>
-  )
+  );
 }

@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WhatsappFloat from "@/components/whatsapp-float";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${lora.variable} font-sans`}>
         <Header />
         <main>{children}</main>
+        <WhatsappFloat />
         <Footer />
       </body>
     </html>

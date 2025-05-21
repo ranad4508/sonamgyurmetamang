@@ -1,11 +1,12 @@
-import GallerySection from "@/components/gallery-section";
+import type { Metadata } from "next";
+import GalleryPageClient from "./GalleryPageClient";
 
-const page = () => {
-  return (
-    <div>
-      <GallerySection />
-    </div>
-  );
+export const metadata: Metadata = {
+  title: "Gallery - Ven. Khen Rinpoche Dr. Sonam Gyurme Tamang",
+  description:
+    "Photo gallery showcasing Ven. Khen Rinpoche's teachings, travels, and humanitarian work",
 };
 
-export default page;
+export default function GalleryPage() {
+  return <GalleryPageClient />;
+}

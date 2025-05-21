@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -53,24 +53,51 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom colors - new palette
-        maroon: {
-          DEFAULT: "#7D3C50",
+        // New warm color palette
+        crimson: {
+          DEFAULT: "#DC143C",
+          light: "#E45A70",
+          dark: "#B01030",
         },
-        teal: {
-          DEFAULT: "#2A6B67",
+        maroon: {
+          DEFAULT: "#800000",
+          light: "#A52A2A",
+          dark: "#5C0000",
+        },
+        ruby: {
+          DEFAULT: "#E0115F",
+          light: "#E84B82",
+          dark: "#B00C4C",
+        },
+        saffron: {
+          DEFAULT: "#F4C430",
+          light: "#F7D35F",
+          dark: "#D1A626",
+        },
+        gold: {
+          DEFAULT: "#FFD700",
+          light: "#FFDF33",
+          dark: "#CCAC00",
         },
         amber: {
-          DEFAULT: "#D9A566",
+          DEFAULT: "#FFBF00",
+          light: "#FFCF33",
+          dark: "#CC9900",
         },
-        sage: {
-          DEFAULT: "#B3C0A4",
+        orange: {
+          DEFAULT: "#FF7F00",
+          light: "#FF9933",
+          dark: "#CC6600",
         },
-        plum: {
-          DEFAULT: "#5D4157",
+        vermilion: {
+          DEFAULT: "#E34234",
+          light: "#E9695E",
+          dark: "#B6352A",
         },
-        terracotta: {
-          DEFAULT: "#A75E49",
+        burgundy: {
+          DEFAULT: "#800020",
+          light: "#A3334D",
+          dark: "#5C0017",
         },
       },
       borderRadius: {
@@ -95,6 +122,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

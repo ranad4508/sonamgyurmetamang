@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import PageTransition from "@/components/page-transition"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Heart, GraduationCap, Leaf } from "lucide-react"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import PageTransition from "@/components/page-transition";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Heart, GraduationCap, Leaf } from "lucide-react";
 
 export default function HumanitarianPageClient() {
   const earthquakeRelief = {
@@ -25,7 +25,7 @@ export default function HumanitarianPageClient() {
       author: "Tenzin Dorje",
       location: "Sindhupalchok District, Nepal",
     },
-  }
+  };
 
   const fuelCrisis = {
     title: "Support During Fuel Crisis",
@@ -45,7 +45,7 @@ export default function HumanitarianPageClient() {
       author: "Dr. Pema Lhamo",
       location: "Community Hospital, Kathmandu",
     },
-  }
+  };
 
   const ongoingProjects = [
     {
@@ -87,7 +87,7 @@ export default function HumanitarianPageClient() {
         "Supported reforestation efforts around sacred sites",
       ],
     },
-  ]
+  ];
 
   return (
     <PageTransition>
@@ -97,8 +97,9 @@ export default function HumanitarianPageClient() {
         </h1>
 
         <p className="text-lg text-center max-w-3xl mx-auto mb-16 text-gray-700 dark:text-gray-300">
-          Venerable Khen Rinpoche's compassion extends beyond spiritual teachings to practical humanitarian efforts that
-          address immediate needs and create sustainable solutions for communities in crisis.
+          Venerable Khen Rinpoche's compassion extends beyond spiritual
+          teachings to practical humanitarian efforts that address immediate
+          needs and create sustainable solutions for communities in crisis.
         </p>
 
         <motion.div
@@ -107,11 +108,15 @@ export default function HumanitarianPageClient() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">Emergency Relief Efforts</h2>
+          <h2 className="font-lora text-3xl text-center mb-10 text-maroon dark:text-amber">
+            Emergency Relief Efforts
+          </h2>
 
           <Tabs defaultValue="earthquake" className="mb-12">
             <TabsList className="grid grid-cols-2 w-full mb-8">
-              <TabsTrigger value="earthquake">Nepal Earthquake Relief</TabsTrigger>
+              <TabsTrigger value="earthquake">
+                Nepal Earthquake Relief
+              </TabsTrigger>
               <TabsTrigger value="fuel">Fuel Crisis Support</TabsTrigger>
             </TabsList>
 
@@ -119,19 +124,29 @@ export default function HumanitarianPageClient() {
               <div className="bg-teal/10 p-8 rounded-lg shadow-md">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                   <div>
-                    <h3 className="font-lora text-2xl mb-4 text-maroon dark:text-amber">{earthquakeRelief.title}</h3>
-                    <p className="mb-6 text-gray-800 dark:text-gray-300">{earthquakeRelief.description}</p>
+                    <h3 className="font-lora text-2xl mb-4 text-maroon dark:text-amber">
+                      {earthquakeRelief.title}
+                    </h3>
+                    <p className="mb-6 text-gray-800 dark:text-gray-300">
+                      {earthquakeRelief.description}
+                    </p>
                     <div className="bg-white/50 dark:bg-gray-800/50 p-6 rounded-lg">
-                      <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">Key Achievements</h4>
+                      <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">
+                        Key Achievements
+                      </h4>
                       <ul className="space-y-3">
-                        {earthquakeRelief.achievements.map((achievement, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1">
-                              ✓
-                            </div>
-                            <span className="text-gray-800 dark:text-gray-300">{achievement}</span>
-                          </li>
-                        ))}
+                        {earthquakeRelief.achievements.map(
+                          (achievement, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <div className="w-6 h-6 rounded-full text-amber flex items-center justify-center text-white shrink-0 mt-1">
+                                ✓
+                              </div>
+                              <span className="text-gray-800 dark:text-gray-300">
+                                {achievement}
+                              </span>
+                            </li>
+                          )
+                        )}
                       </ul>
                     </div>
                   </div>
@@ -153,7 +168,9 @@ export default function HumanitarianPageClient() {
                       {earthquakeRelief.testimonial.author.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-medium">{earthquakeRelief.testimonial.author}</p>
+                      <p className="font-medium">
+                        {earthquakeRelief.testimonial.author}
+                      </p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
                         {earthquakeRelief.testimonial.location}
                       </p>
@@ -177,17 +194,25 @@ export default function HumanitarianPageClient() {
                     </div>
                   </div>
                   <div className="order-1 md:order-2">
-                    <h3 className="font-lora text-2xl mb-4 text-maroon dark:text-amber">{fuelCrisis.title}</h3>
-                    <p className="mb-6 text-gray-800 dark:text-gray-300">{fuelCrisis.description}</p>
+                    <h3 className="font-lora text-2xl mb-4 text-maroon dark:text-amber">
+                      {fuelCrisis.title}
+                    </h3>
+                    <p className="mb-6 text-gray-800 dark:text-gray-300">
+                      {fuelCrisis.description}
+                    </p>
                     <div className="bg-white/50 dark:bg-gray-800/50 p-6 rounded-lg">
-                      <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">Key Achievements</h4>
+                      <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">
+                        Key Achievements
+                      </h4>
                       <ul className="space-y-3">
                         {fuelCrisis.achievements.map((achievement, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center text-white shrink-0 mt-1">
                               ✓
                             </div>
-                            <span className="text-gray-800 dark:text-gray-300">{achievement}</span>
+                            <span className="text-gray-800 dark:text-gray-300">
+                              {achievement}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -203,8 +228,12 @@ export default function HumanitarianPageClient() {
                       {fuelCrisis.testimonial.author.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-medium">{fuelCrisis.testimonial.author}</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{fuelCrisis.testimonial.location}</p>
+                      <p className="font-medium">
+                        {fuelCrisis.testimonial.author}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {fuelCrisis.testimonial.location}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -214,24 +243,37 @@ export default function HumanitarianPageClient() {
         </motion.div>
 
         <div className="mb-20">
-          <h2 className="font-lora text-3xl text-center mb-10 text-teal dark:text-sage">Ongoing Projects</h2>
+          <h2 className="font-lora text-3xl text-center mb-10 text-teal dark:text-sage">
+            Ongoing Projects
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {ongoingProjects.map((project, index) => (
-              <div key={index} className={`bg-${project.color} p-8 rounded-lg shadow-md`}>
+              <div
+                key={index}
+                className={`bg-${project.color} p-8 rounded-lg shadow-md`}
+              >
                 <div className="flex items-center gap-4 mb-6">
                   {project.icon}
-                  <h3 className="font-lora text-2xl mb-0 text-maroon dark:text-amber">{project.title}</h3>
+                  <h3 className="font-lora text-2xl mb-0 text-maroon dark:text-amber">
+                    {project.title}
+                  </h3>
                 </div>
-                <p className="mb-6 text-gray-800 dark:text-gray-300">{project.description}</p>
+                <p className="mb-6 text-gray-800 dark:text-gray-300">
+                  {project.description}
+                </p>
                 <div className="bg-white/50 dark:bg-gray-800/50 p-6 rounded-lg">
-                  <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">Key Achievements</h4>
+                  <h4 className="font-lora text-xl mb-4 text-teal dark:text-sage">
+                    Key Achievements
+                  </h4>
                   <ul className="space-y-3">
                     {project.achievements.map((achievement, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="w-6 h-6 rounded-full text-maroon flex items-center justify-center text-white shrink-0 mt-1">
                           ✓
                         </div>
-                        <span className="text-gray-800 dark:text-gray-300">{achievement}</span>
+                        <span className="text-gray-800 dark:text-gray-300">
+                          {achievement}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -242,5 +284,5 @@ export default function HumanitarianPageClient() {
         </div>
       </div>
     </PageTransition>
-  )
+  );
 }

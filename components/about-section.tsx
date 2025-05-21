@@ -19,14 +19,14 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900"
+      className="py-20 md:py-32 bg-amber/5 dark:bg-gray-900"
     >
       <motion.div style={{ opacity, y }} className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1E3A5F] dark:text-[#EBE175] mb-4">
+          <h2 className="font-playfair text-3xl md:text-4xl text-maroon dark:text-gold mb-4">
             About Venerable Khen Rinpoche
           </h2>
-          <div className="w-24 h-1 bg-[#F68F30] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-orange mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-lg">
             A visionary spiritual master dedicated to preserving and sharing
             Buddhist wisdom while fostering global peace and harmony.
@@ -40,7 +40,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-playfair text-2xl text-[#9C282A] dark:text-[#F68F30] mb-4">
+            <h3 className="font-playfair text-2xl text-crimson dark:text-orange mb-4">
               Spiritual Journey
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -56,10 +56,7 @@ export default function AboutSection() {
               Dinchhen Rinpoche, H.H. Penor Rinpoche, and H.E. Kyabje Rigzin
               Dorje Rinpoche.
             </p>
-            <Button
-              asChild
-              className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-white"
-            >
+            <Button asChild className="bg-maroon hover:bg-maroon/90 text-white">
               <Link href="/about">Read Full Biography</Link>
             </Button>
           </motion.div>
@@ -73,13 +70,13 @@ export default function AboutSection() {
           >
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/k4.png"
+                src="/k4.png?height=600&width=800"
                 alt="Ven. Khen Rinpoche teaching"
                 fill
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-[#F68F30] p-4 rounded-lg shadow-lg text-white">
+            <div className="absolute -bottom-6 -right-6 bg-orange p-4 rounded-lg shadow-lg text-white">
               <p className="font-playfair text-lg">
                 40+ years of spiritual practice
               </p>
@@ -99,26 +96,26 @@ export default function AboutSection() {
               title: "Spiritual Master",
               description:
                 "Dedicated to preserving and sharing the timeless wisdom of Buddhism through teachings and initiations.",
-              color: "bg-[#1E3A5F]/10",
+              color: "bg-maroon/10",
             },
             {
               title: "Educator & Mentor",
               description:
                 "Empowering seekers worldwide through education, guidance, and transformative knowledge.",
-              color: "bg-[#9C282A]/10",
+              color: "bg-crimson/10",
             },
             {
               title: "Visionary Leader",
               description:
                 "Pioneering spiritual wellness tourism and harnessing media to illuminate Buddhist values globally.",
-              color: "bg-[#F68F30]/10",
+              color: "bg-orange/10",
             },
           ].map((item, index) => (
             <div
               key={index}
               className={`${item.color} p-6 rounded-lg shadow-md`}
             >
-              <h3 className="font-playfair text-xl mb-3 text-[#1E3A5F] dark:text-[#EBE175]">
+              <h3 className="font-playfair text-xl mb-3 text-maroon dark:text-gold">
                 {item.title}
               </h3>
               <p className="text-gray-700 dark:text-gray-300">

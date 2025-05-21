@@ -12,40 +12,40 @@ export default function TeachingsSection() {
       title: "Buddhist Philosophy",
       description:
         "Explore the profound teachings of the Buddha and the path to enlightenment.",
-      icon: <BookOpen className="h-6 w-6 text-[#F68F30]" />,
-      color: "bg-[#F68F30]/10",
+      icon: <BookOpen className="h-6 w-6 text-orange" />,
+      color: "bg-orange/10",
     },
     {
       title: "Meditation Practices",
       description:
         "Learn various meditation techniques from the Nyingma tradition.",
-      icon: <Calendar className="h-6 w-6 text-[#9C282A]" />,
-      color: "bg-[#9C282A]/10",
+      icon: <Calendar className="h-6 w-6 text-crimson" />,
+      color: "bg-crimson/10",
     },
     {
       title: "Dharma Talks",
       description:
         "Recorded teachings on various aspects of Buddhist practice and philosophy.",
-      icon: <Video className="h-6 w-6 text-[#1E3A5F]" />,
-      color: "bg-[#1E3A5F]/10",
+      icon: <Video className="h-6 w-6 text-maroon" />,
+      color: "bg-maroon/10",
     },
     {
       title: "Publications",
       description:
         "Books, articles, and practice guides authored by Ven. Khen Rinpoche.",
-      icon: <FileText className="h-6 w-6 text-[#4B4C3A]" />,
-      color: "bg-[#4B4C3A]/10",
+      icon: <FileText className="h-6 w-6 text-vermilion" />,
+      color: "bg-vermilion/10",
     },
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 md:py-32 bg-amber/5 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-3xl md:text-4xl text-[#1E3A5F] dark:text-[#EBE175] mb-4">
+          <h2 className="font-playfair text-3xl md:text-4xl text-maroon dark:text-gold mb-4">
             Spiritual Lineage & Teachings
           </h2>
-          <div className="w-24 h-1 bg-[#F68F30] mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-orange mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-lg">
             Ven. Khen Rinpoche has received key initiations and teachings from
             notable figures in Tibetan Buddhism and continues to share this
@@ -68,7 +68,7 @@ export default function TeachingsSection() {
                 <CardContent className="pt-6">
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4">{teaching.icon}</div>
-                    <h3 className="font-playfair text-xl mb-2 text-[#1E3A5F] dark:text-[#EBE175]">
+                    <h3 className="font-playfair text-xl mb-2 text-maroon dark:text-gold">
                       {teaching.title}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300">
@@ -88,8 +88,8 @@ export default function TeachingsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-playfair text-2xl md:text-3xl text-[#9C282A] dark:text-[#F68F30] mb-6">
-              Nyungné Practice
+            <h3 className="font-playfair text-2xl md:text-3xl text-crimson dark:text-orange mb-6">
+              Ngyungné Practice
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               Ven. Khen Rinpoche is a leading proponent of Nyungné (fasting
@@ -103,7 +103,7 @@ export default function TeachingsSection() {
             </p>
             <Button
               asChild
-              className="bg-[#9C282A] hover:bg-[#9C282A]/90 text-white"
+              className="bg-crimson hover:bg-crimson/90 text-white"
             >
               <a
                 href="https://nyungne.org"
@@ -123,12 +123,12 @@ export default function TeachingsSection() {
           >
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/k7.jpg"
+                src="/ngyungne.png?height=400&width=600"
                 alt="Nyungné Practice"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[#9C282A]/20 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-crimson/20 mix-blend-multiply"></div>
             </div>
           </motion.div>
         </div>

@@ -1,180 +1,227 @@
-"use client"
-import { motion } from "framer-motion"
-import PageTransition from "@/components/page-transition"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Heart, HandHeart, Lightbulb, Users } from "lucide-react"
+"use client";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import PageTransition from "@/components/page-transition";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Building, CreditCard } from "lucide-react";
 
 export default function SupportPageClient() {
+  const [activeTab, setActiveTab] = useState("bank");
+
   return (
     <PageTransition>
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <h1 className="font-playfair text-4xl md:text-5xl text-center mb-6 text-[#1E3A5F]">Support & Donations</h1>
+        <h1 className="font-playfair text-4xl md:text-5xl text-center mb-6 text-maroon">
+          Support & Donations
+        </h1>
 
         <p className="text-lg text-center max-w-3xl mx-auto mb-16 text-gray-700">
-          Your generous support enables us to continue our mission of preserving and sharing Buddhist wisdom, providing
-          education, and fostering global peace and harmony.
+          Your generous support enables us to continue our mission of preserving
+          and sharing Buddhist wisdom, providing education, and fostering global
+          peace and harmony.
         </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <Card className="h-full bg-[#F68F30]/5 border-none shadow-md">
-              <CardHeader>
-                <Heart className="h-10 w-10 text-[#F68F30] mb-2" />
-                <CardTitle className="text-xl font-playfair">One-Time Donation</CardTitle>
-                <CardDescription>Make a direct impact with a one-time contribution</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-700">
-                  Your donation will support our ongoing projects, including educational programs, humanitarian relief,
-                  and the preservation of Buddhist teachings.
-                </p>
-                <Button className="w-full bg-[#F68F30] hover:bg-[#F68F30]/90">Donate Now</Button>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Card className="h-full bg-[#9C282A]/5 border-none shadow-md">
-              <CardHeader>
-                <HandHeart className="h-10 w-10 text-[#9C282A] mb-2" />
-                <CardTitle className="text-xl font-playfair">Monthly Giving</CardTitle>
-                <CardDescription>Become a sustaining supporter with monthly donations</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-700">
-                  Regular monthly contributions provide reliable support for our long-term initiatives and help us plan
-                  for the future with confidence.
-                </p>
-                <Button className="w-full bg-[#9C282A] hover:bg-[#9C282A]/90 text-white">
-                  Become a Monthly Supporter
-                </Button>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Card className="h-full bg-[#1E3A5F]/5 border-none shadow-md">
-              <CardHeader>
-                <Lightbulb className="h-10 w-10 text-[#1E3A5F] mb-2" />
-                <CardTitle className="text-xl font-playfair">Project Sponsorship</CardTitle>
-                <CardDescription>Support a specific initiative or project</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-700">
-                  Direct your support to a particular project or initiative that resonates with you, such as education,
-                  media production, or humanitarian relief.
-                </p>
-                <Button className="w-full bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-white">Sponsor a Project</Button>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="bg-[#EBE175]/10 p-8 rounded-lg shadow-md mb-16"
+          transition={{ duration: 0.8 }}
+          className="bg-amber/10 p-8 rounded-lg shadow-md mb-16 max-w-4xl mx-auto"
         >
-          <h2 className="font-playfair text-2xl md:text-3xl mb-6 text-center text-[#9C282A]">Payment Methods</h2>
+          <h2 className="font-playfair text-2xl md:text-3xl mb-8 text-center text-crimson">
+            Payment Information
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-playfair text-xl mb-4 text-[#1E3A5F]">Online Payment</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-[#F68F30] flex items-center justify-center text-white">✓</div>
-                  <span>Credit/Debit Cards</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-[#F68F30] flex items-center justify-center text-white">✓</div>
-                  <span>PayPal</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-[#F68F30] flex items-center justify-center text-white">✓</div>
-                  <span>Esewa (Nepal)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-6 h-6 rounded-full bg-[#F68F30] flex items-center justify-center text-white">✓</div>
-                  <span>Khalti (Nepal)</span>
-                </li>
-              </ul>
-            </div>
+          <Tabs
+            defaultValue="bank"
+            className="w-full"
+            onValueChange={setActiveTab}
+          >
+            <TabsList className="grid grid-cols-3 mb-8">
+              <TabsTrigger
+                value="bank"
+                className={`${
+                  activeTab === "bank" ? "bg-maroon text-white" : "text-maroon"
+                } data-[state=active]:bg-maroon data-[state=active]:text-white`}
+              >
+                Bank Transfer
+              </TabsTrigger>
+              <TabsTrigger
+                value="esewa"
+                className={`${
+                  activeTab === "esewa" ? "bg-orange text-white" : "text-orange"
+                } data-[state=active]:bg-orange data-[state=active]:text-white`}
+              >
+                Esewa
+              </TabsTrigger>
+              <TabsTrigger
+                value="khalti"
+                className={`${
+                  activeTab === "khalti"
+                    ? "bg-vermilion text-white"
+                    : "text-vermilion"
+                } data-[state=active]:bg-vermilion data-[state=active]:text-white`}
+              >
+                Khalti
+              </TabsTrigger>
+            </TabsList>
 
-            <div>
-              <h3 className="font-playfair text-xl mb-4 text-[#1E3A5F]">Bank Transfer</h3>
-              <div className="space-y-3 text-gray-800">
-                <p>
-                  <strong>Account Name:</strong> B.T.M.C. Foundation
-                </p>
-                <p>
-                  <strong>Bank:</strong> Nepal Investment Bank
-                </p>
-                <p>
-                  <strong>Account Number:</strong> 01234567890123456
-                </p>
-                <p>
-                  <strong>Swift Code:</strong> NIBLNPKT
-                </p>
-                <p className="text-sm text-gray-600 mt-4">
-                  Please include your name and "Donation" in the transfer description.
-                </p>
+            <TabsContent
+              value="bank"
+              className="bg-white/70 p-6 rounded-lg shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Building className="h-8 w-8 text-maroon" />
+                <h3 className="font-playfair text-2xl text-maroon">
+                  Bank Transfer Details
+                </h3>
               </div>
-            </div>
-          </div>
+
+              <div className="space-y-4 text-gray-800">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Account Name:</p>
+                  <p>B.T.M.C. Foundation</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Bank Name:</p>
+                  <p>Nepal Investment Bank</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Account Number:</p>
+                  <p className="font-mono">01234567890123456</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Branch:</p>
+                  <p>Boudha Branch, Kathmandu</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Swift Code:</p>
+                  <p className="font-mono">NIBLNPKT</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <p className="font-medium">Currency:</p>
+                  <p>NPR / USD</p>
+                </div>
+
+                <div className="mt-6 bg-amber/10 p-4 rounded-md">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-medium">Important:</span> Please
+                    include your name and "Donation" in the transfer
+                    description. After making the transfer, please notify us at{" "}
+                    <span className="text-maroon">
+                      donations@khenrinpoche.org
+                    </span>{" "}
+                    for proper acknowledgment.
+                  </p>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent
+              value="esewa"
+              className="bg-white/70 p-6 rounded-lg shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CreditCard className="h-8 w-8 text-orange" />
+                <h3 className="font-playfair text-2xl text-orange">
+                  Esewa Payment Details
+                </h3>
+              </div>
+
+              <div className="space-y-4 text-gray-800">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Esewa ID:</p>
+                  <p className="font-mono">9810223626</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Account Name:</p>
+                  <p>B.T.M.C. Foundation</p>
+                </div>
+
+                <div className="mt-6 bg-amber/10 p-4 rounded-md">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-medium">
+                      How to donate using Esewa:
+                    </span>
+                    <ol className="list-decimal ml-5 mt-2 space-y-1">
+                      <li>Log in to your Esewa account</li>
+                      <li>Select "Send Money"</li>
+                      <li>Enter the Esewa ID: 9810223626</li>
+                      <li>Enter the amount you wish to donate</li>
+                      <li>Add "Donation to Khen Rinpoche" in the remarks</li>
+                      <li>Complete the transaction</li>
+                    </ol>
+                  </p>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent
+              value="khalti"
+              className="bg-white/70 p-6 rounded-lg shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <CreditCard className="h-8 w-8 text-vermilion" />
+                <h3 className="font-playfair text-2xl text-vermilion">
+                  Khalti Payment Details
+                </h3>
+              </div>
+
+              <div className="space-y-4 text-gray-800">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Khalti ID:</p>
+                  <p className="font-mono">9766883351</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 border-b border-gray-200 pb-4">
+                  <p className="font-medium">Account Name:</p>
+                  <p>B.T.M.C. Foundation</p>
+                </div>
+
+                <div className="mt-6 bg-amber/10 p-4 rounded-md">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-medium">
+                      How to donate using Khalti:
+                    </span>
+                    <ol className="list-decimal ml-5 mt-2 space-y-1">
+                      <li>Log in to your Khalti account</li>
+                      <li>Select "Send Money"</li>
+                      <li>Enter the mobile number: 9766883351</li>
+                      <li>Enter the amount you wish to donate</li>
+                      <li>Add "Donation to Khen Rinpoche" in the remarks</li>
+                      <li>Complete the transaction</li>
+                    </ol>
+                  </p>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16 bg-gradient-to-r from-amber/10 to-orange/10 p-8 rounded-lg shadow-md text-center max-w-3xl mx-auto"
         >
-          <h2 className="font-playfair text-2xl md:text-3xl mb-8 text-center text-[#9C282A]">Other Ways to Support</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="bg-[#4B4C3A]/5 border-none shadow-md">
-              <CardHeader>
-                <Users className="h-10 w-10 text-[#4B4C3A] mb-2" />
-                <CardTitle className="text-xl font-playfair">Volunteer</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 text-gray-700">
-                  Share your skills and time to support our various initiatives. We welcome volunteers with expertise in
-                  education, media, technology, translation, and more.
-                </p>
-                <Button variant="outline" className="w-full border-[#4B4C3A] text-[#4B4C3A] hover:bg-[#4B4C3A]/10">
-                  Learn About Volunteering
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-[#90655A]/5 border-none shadow-md">
-              <CardHeader>
-                <Lightbulb className="h-10 w-10 text-[#90655A] mb-2" />
-                <CardTitle className="text-xl font-playfair">In-Kind Donations</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-4 text-gray-700">
-                  Donate books, educational materials, media equipment, or other resources that can support our
-                  educational and media production initiatives.
-                </p>
-                <Button variant="outline" className="w-full border-[#90655A] text-[#90655A] hover:bg-[#90655A]/10">
-                  Contact About In-Kind Donations
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+          <h2 className="font-playfair text-2xl text-maroon mb-4">
+            Contact for Support
+          </h2>
+          <p className="text-gray-700 mb-4">
+            For any questions about donations or support opportunities, please
+            contact our support team:
+          </p>
+          <p className="text-lg font-medium text-crimson mb-2">
+            support@khenrinpoche.org
+          </p>
+          <p className="text-lg font-medium text-crimson">+977 9810 223 626</p>
         </motion.div>
       </div>
     </PageTransition>
-  )
+  );
 }
